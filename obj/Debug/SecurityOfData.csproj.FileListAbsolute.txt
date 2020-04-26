@@ -1,0 +1,10 @@
+C:\Users\Евгений\source\repos\SecurityOfData\bin\Debug\SecurityOfData.exe.config
+C:\Users\Евгений\source\repos\SecurityOfData\bin\Debug\SecurityOfData.exe
+C:\Users\Евгений\source\repos\SecurityOfData\bin\Debug\SecurityOfData.pdb
+C:\Users\Евгений\source\repos\SecurityOfData\obj\Debug\SecurityOfData.csprojAssemblyReference.cache
+C:\Users\Евгений\source\repos\SecurityOfData\obj\Debug\SecurityOfData.Form1.resources
+C:\Users\Евгений\source\repos\SecurityOfData\obj\Debug\SecurityOfData.Properties.Resources.resources
+C:\Users\Евгений\source\repos\SecurityOfData\obj\Debug\SecurityOfData.csproj.GenerateResource.cache
+C:\Users\Евгений\source\repos\SecurityOfData\obj\Debug\SecurityOfData.csproj.CoreCompileInputs.cache
+C:\Users\Евгений\source\repos\SecurityOfData\obj\Debug\SecurityOfData.exe
+C:\Users\Евгений\source\repos\SecurityOfData\obj\Debug\SecurityOfData.pdb
