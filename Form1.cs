@@ -38,17 +38,21 @@ namespace SecurityOfData
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            ushort Encode = 0x3254;
             listBox1.Items.Clear();
             listBox1.BeginUpdate();
-            string[] Strings = richTextBox1.Text.Split(new char[] { '\n', '\t', ' ' },
-            StringSplitOptions.RemoveEmptyEntries);
+            string[] Strings = richTextBox1.Text.Split(new char[] {'\t'}, StringSplitOptions.RemoveEmptyEntries);
             foreach (string s in Strings)
             {
                 string Str = s.Trim();
-
+                var ch = Str.ToCharArray();
+                for(int i = 0;i<ch.Length;i++)
+                {
+                ch[i] = (char)(ch[i] ^ Encode);
+                }
+                Str = new string(ch); 
                 if (Str == String.Empty) continue;
                 listBox1.Items.Add(Str);
-                
             }
             listBox1.EndUpdate();
         }
