@@ -35,5 +35,22 @@ namespace SecurityOfData
             }
             OpenDlg.Dispose();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            listBox1.BeginUpdate();
+            string[] Strings = richTextBox1.Text.Split(new char[] { '\n', '\t', ' ' },
+            StringSplitOptions.RemoveEmptyEntries);
+            foreach (string s in Strings)
+            {
+                string Str = s.Trim();
+
+                if (Str == String.Empty) continue;
+                listBox1.Items.Add(Str);
+                
+            }
+            listBox1.EndUpdate();
+        }
     }
 }
