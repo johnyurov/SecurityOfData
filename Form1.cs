@@ -38,7 +38,7 @@ namespace SecurityOfData
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            ushort Encode = 0x3254;
+            ushort Encode = 0x0088;
             listBox1.Items.Clear();
             listBox1.BeginUpdate();
             string[] Strings = richTextBox1.Text.Split(new char[] {'\t'}, StringSplitOptions.RemoveEmptyEntries);
@@ -55,6 +55,26 @@ namespace SecurityOfData
                 listBox1.Items.Add(Str);
             }
             listBox1.EndUpdate();
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog SaveDlg = new SaveFileDialog();
+            if (SaveDlg.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter Writer = new StreamWriter(SaveDlg.FileName);
+                for (int i = 0; i < listBox1.Items.Count; i++)
+                {
+                    Writer.WriteLine((string)listBox1.Items[i]);
+                }
+                Writer.Close();
+            }
+            SaveDlg.Dispose();
         }
     }
 }
