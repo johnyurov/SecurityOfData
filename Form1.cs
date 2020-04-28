@@ -41,8 +41,8 @@ namespace SecurityOfData
             ushort Encode = 0x0088;
             listBox1.Items.Clear();
             listBox1.BeginUpdate();
-            string[] Strings = richTextBox1.Text.Split(new char[] {'\t'}, StringSplitOptions.RemoveEmptyEntries);
-            foreach (string s in Strings)
+            string[] @strings = richTextBox1.Text.Split(new char[] {'\t', ' '}, StringSplitOptions.RemoveEmptyEntries);
+            foreach (string s in @strings)
             {
                 string Str = s.Trim();
                 var ch = Str.ToCharArray();
