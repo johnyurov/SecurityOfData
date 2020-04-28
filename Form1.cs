@@ -38,19 +38,38 @@ namespace SecurityOfData
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            ushort Encode = 0x0088;
+            ushort Encode = 0x0010;
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    {
+                        Encode = 0x0015;
+                        break;
+                    }
+                case 1:
+                    {
+
+                        Encode = 0x0088;
+                        break;
+                    }
+                case 2:
+                    {
+                        Encode = 0x3264;
+                        break;
+                    }
+            }
             listBox1.Items.Clear();
             listBox1.BeginUpdate();
-            string[] @strings = richTextBox1.Text.Split(new char[] {'\t', ' '}, StringSplitOptions.RemoveEmptyEntries);
+            string[] @strings = richTextBox1.Text.Split(new char[] { '\t', ' ' }, StringSplitOptions.RemoveEmptyEntries);
             foreach (string s in @strings)
             {
                 string Str = s.Trim();
                 var ch = Str.ToCharArray();
-                for(int i = 0;i<ch.Length;i++)
+                for (int i = 0; i < ch.Length; i++)
                 {
-                ch[i] = (char)(ch[i] ^ Encode);
+                    ch[i] = (char)(ch[i] ^ Encode);
                 }
-                Str = new string(ch); 
+                Str = new string(ch);
                 if (Str == String.Empty) continue;
                 listBox1.Items.Add(Str);
             }
@@ -75,6 +94,16 @@ namespace SecurityOfData
                 Writer.Close();
             }
             SaveDlg.Dispose();
+        }
+
+        private void X0015ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
